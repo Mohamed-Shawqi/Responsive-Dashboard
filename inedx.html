@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav class="sidebar position-fixed top-0 d-inline-block " id="sidebar">
+
+        <div class="close-box d-flex pt-4 fs-1 justify-content-center d-sm-none ">
+            <i class="fa-solid fa-xmark cursor-pointer" id="close"></i>
+        </div>
+
+        <div class="logo p-4 mb-5 d-none d-lg-block">
+            <img src="images/revew.png" alt="revew">
+        </div>
+
+        <ul class="">
+            <li class="menu-list my-5 px-4 active">
+                <a href="#" class="menu-link fw-semibold d-flex ">
+                    <img class="pe-2" src="Images/Iconly/Light-Outline/Home.svg" alt="Dashboard">
+                    <span class="d-none d-lg-inline-block">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li class="menu-list my-5 px-4 ">
+                <a href="#" class="menu-link fw-semibold  d-flex  ">
+                    <img class="pe-2" src="Images/Iconly/Light-Outline/Document.svg" alt="Order">
+                    <span class="d-none d-lg-inline-block">
+                        Order
+                    </span>
+                </a>
+            </li>
+            <li class="menu-list my-5 px-4 ">
+                <a href="#" class="menu-link fw-semibold  d-flex  ">
+                    <img class="pe-2" src="Images/Iconly/Light-Outline/Paper.svg" alt="Invoice">
+                    <span class="d-none d-lg-inline-block">
+                        Invoice
+                    </span>
+                </a>
+            </li>
+            <li class="menu-list my-5 px-4 ">
+                <a href="#" class="menu-link fw-semibold  d-flex  ">
+                    <div class="pe-2 d-inline-block position-relative">
+                        <img src="Images/Iconly/Light-Outline/Notification.svg" alt="Notification">
+                        <span class="not-flag position-absolute translate-middle rounded-circle bg-danger"></span>
+                    </div>
+                    <span class="d-none d-lg-inline-block">
+                        Notification
+                    </span>
+                </a>
+            </li>
+            <li class=" menu-list my-5 px-4 ">
+                <a href="#" class="menu-link fw-semibold d-flex  ">
+                    <img class="pe-2" src="Images/Iconly/Light-Outline/Setting.svg" alt="Setting">
+                    <span class="d-none d-lg-inline-block">
+                        Setting
+                    </span>
+                </a>
+            </li>
+            <li class="menu-list my-5 px-4 ">
+                <a href="#" class="menu-link fw-semibold  d-flex  ">
+                    <img class="pe-2" src="Images/Iconly/Light-Outline/Chat.svg" alt="Report A Bug">
+                    <span class="d-none d-lg-inline-block">
+                        Report A Bug
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class=" ps-main ">
+
+        <nav class="navbar p-4 bg-white ">
+            <div class="bar-box d-sm-none">
+                <i class="fa-solid fa-bars fs-1 cursor-pointer " id="bar"></i>
+            </div>
+
+            <div class="logo ms-auto me-5 d-sm-none">
+                <img src="images/revew.png" alt="revew">
+            </div>
+
+            <form class="d-flex border-0 rounded pe-2 input-search mx-3" role="search">
+                <input class="d-none  d-sm-block form-control me-2 border-0" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="border-0 bg-white" type="submit">
+                    <img src="images/Iconly/Light-Outline/search.svg" alt="">
+                </button>
+            </form>
+
+            <div class="user d-flex align-items-center">
+                <div class="avatar">
+                    <img src="images/avatar.png" alt=" " class="rounded-circle pe-2">
+                </div>
+                <div class="user-name d-none d-sm-block">
+                    <span class="hello fw-bold">Hello.</span>
+                    Mike
+                </div>
+                <img class="cursor-pointer ps-2 d-none d-sm-block " src="Images/Iconly/Arrow---Down-2.svg">
+            </div>
+
+        </nav>
+
+        <main class="row ps-main p-5 g-4 ">
+
+            <div class="col-12 col-md-6 col-xl-3 ">
+                <div class="m-1 bg-white rounded-5 p-4 box-hight shadow ">
+                    <h3 class="f-1 fw-bold">Plan Type</h3>
+                    <div class="fs-5 d-flex align-items-center pt-3 ">
+                        <img src="images/Iconly/Frame.svg" class="me-3">
+                        <span class="span-text fw-semibold px-3 py-2 rounded-4 ">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3 ">
+                <div class="m-1 bg-white rounded-5 p-4 box-hight shadow">
+                    <h3 class="f-1 fw-bold">Total Reviews</h3>
+                    <div class="d-flex align-items-center pt-3">
+                        <img src="images/Iconly/Chat.svg" class="me-3">
+                        <span class="f-48 fw-bold">5492</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table  -->
+            <div class="col-12 col-lg-12 col-xl-6 ">
+                <div class="box-hight ms-1 bg-white rounded-5 p-4 shadow  ">
+                    <h3 class="f-1 fw-bold">Campaigns</h3>
+                    <div class="overflow-scroll scroll-hidden">
+                        <table class="p-1 ">
+                            <tr class="fc-gray ">
+                                <th class="text-start fw-normal p-1">Company</th>
+                                <th class="text-start fw-normal p-1">Start</th>
+                                <th class="text-start fw-normal p-1">End</th>
+                                <th class="text-start fw-normal p-1">Status</th>
+                            </tr>
+                            <tr class="fw-bold ">
+                                <td class="text-start p-1 d-flex">
+                                    <div class="img-box me-2">
+                                        <img src="images/pinterest.png" alt="">
+                                    </div>
+                                    Pintrest
+                                </td>
+                                <td class="text-start p-1">June 1, 2022</td>
+                                <td class="text-start p-1">July 1, 2022</td>
+                                <td class="text-start p-1">
+                                    <span class="state-active py-1 px-2 rounded ">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="fw-bold ">
+                                <td class="text-start p-1 d-flex ">
+                                    <div class="img-box me-2">
+                                        <img src="images/soundcloud.png" alt="">
+                                    </div>
+                                    Soundcloud
+                                </td>
+                                <td class="text-start p-1">June 1, 2022</td>
+                                <td class="text-start p-1">Aug 1, 2022</td>
+                                <td class="text-start p-1">
+                                    <span class="state-inactive py-1 px-2 rounded ">
+                                        inactive
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="fw-bold ">
+                                <td class="text-start p-1 d-flex">
+                                    <div class="img-box me-2">
+                                        <img src="images/soundcloud.png" alt="">
+                                    </div>Soundcloud
+                                </td>
+                                <td class="text-start p-1">June 1, 2022</td>
+                                <td class="text-start p-1">jan 1, 2022</td>
+                                <td class="text-start p-1">
+                                    <span class="state-inactive py-1 px-2 rounded ">
+                                        inactive
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-12 col-xl-6">
+                <div class="bg-white rounded-5 p-4 shadow">
+                    <h3 class="f-1 fw-bold">Announcement</h3>
+                    <div class="row  align-items-center p-3">
+                        <div class="col-12 col-md-5 ann-img-box pb-4 d-flex justify-content-center ">
+                            <img src="Images/Rectangle 15.jpg" alt="" class="">
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <h5 class="fw-bold  lh-base ">
+                                Employer Branding: Definition, Process, Strategy and Resources
+                            </h5>
+                            <span class="fc-gray py-3 d-block">12 . 20 . 2022</span>
+                            <p class="fc-gray fs-6">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                                Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. </p>
+
+                            <p class="fc-gray">It has survived not only five centuries, but also the leap into
+                                electronic
+                                typesetting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-12 col-xl-6">
+                <div class="bg-white rounded-5 p-4 shadow">
+                    <h3 class="f-1 fw-bold">Payment History</h3>
+                    <div class="">
+                        <canvas id="myChart" class="w-100"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+<script>
+    let bar = document.getElementById("bar");
+    let close = document.getElementById("close");
+    let sidebar = document.getElementById("sidebar");
+
+    bar.onclick = () => {
+        sidebar.classList.toggle("open")
+    }
+    close.onclick = () => {
+        sidebar.classList.toggle("open")
+    }
+</script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['01', 0, '03', '0', '05', '06', '07', '08', 0, '10'],
+            datasets: [{
+                label: ' ',
+                data: [0, 1, 2, 16, 4, 2, 15, 3, 3, 10],
+                borderColor: '#F75707',
+                borderWidth: 8,
+                pointRadius: 6,
+                pointBorderColor: '#fff',
+            }]
+        },
+        options: {
+            elements: {
+                points: {
+
+                }
+            },
+            scales: {
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</html>
